@@ -1,0 +1,2008 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie ie8" class="no-js" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <title>National LiveStock Development Board</title>
+    <!-- Meta Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta name="description" content="National Livestock Development Board Official web site which contatins details about livestock and breeds" />
+	<meta name="keywords" content="NLDB Srilanka,Livestock,Breeds,export,Milk,Fresh Milk,Narahenpita Milk Board,Inotek Solutions,Dairy Products Srilanka" />
+	<meta property="og:title" content="National Livestock Development Board" />
+	<meta property="og:description" content="National Livestock Development Board Official web site which contatins details about livestock and breeds" />
+	<meta property="og:image" content="http://www.nldb.gov.lk/images/about/logo.png" />
+	<meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta property="og:url" content="url" />
+    <meta property="og:type" content="article" />
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="http://www.nldb.gov.lk/images/about/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="http://www.nldb.gov.lk/images/about/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="http://www.nldb.gov.lk/images/about/logo.png">
+    <link rel="manifest" href="http://www.nldb.gov.lk/images/about/logo.png">
+
+
+    <!-- CSS FILES -->
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" data-name="skins">
+    <link rel="stylesheet" href="css/layout/wide.css" data-name="layout">
+
+    <link rel="stylesheet" href="css/fractionslider.css"/>
+    <link rel="stylesheet" href="css/style-fraction.css"/>
+    <link rel="stylesheet" href="css/card_style.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/switcher.css" media="screen" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<style>
+.buttonn {
+  border-radius: 4px;
+  background-color: #8CBE45;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+  padding: 5px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+
+}
+
+.buttonn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.buttonn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.buttonn:hover span {
+  padding-right: 25px;
+}
+
+.buttonn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* card css for Advertising */
+
+#card {
+  width: 300px;
+  min-width: 300px; /* To Prevent Element's Width From Going Below 300px */
+
+  background: #fff;
+  font-family: "Open Sans", sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.176) 0px 16px 48px 0px;
+  border-radius: 7px;
+
+  resize: both; /* To Resize */
+  overflow: auto;
+  border : solid 2px #8CBE45 !important;
+}
+
+#img {
+  height: 100px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 7px 7px 0 0;
+  border-bottom: solid 2px #8CBE45;
+}
+
+#title {
+  text-align: center;
+}
+
+#desc {
+  margin: 1rem;
+  color: #a5a2bc;
+  line-height: 1.6rem;
+  word-spacing: 2px;
+}
+
+
+
+
+
+
+
+
+
+.popup-link{
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.popup-link a{
+    background: #333;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size:17px;
+    cursor:pointer;
+    margin:20px;
+    text-decoration:none;
+}
+
+.popup-container {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.3);
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21, 17, 17, 0.61);
+    display: flex;
+    align-items: center;
+
+
+}
+.popup-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0px;
+    border: 1px solid #888;
+    width: 100%;
+
+
+}
+.popup-content p{
+    font-size: 17px;
+    padding: 10px;
+    line-height: 20px;
+}
+.popup-content a.close{
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    background: red;
+    padding: 8px;
+    margin: 0;
+    text-decoration:none;
+}
+
+.popup-content a.close:hover{
+  color: #fff;
+}
+
+.popup-content span:hover,
+.popup-content span:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.popup-container:target{
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.popup-container h3{
+  margin:10px;
+}
+/*End popup styles*/
+
+/* Additional styles */
+.popup-style-2{
+  transform: scale(0.3);
+  
+}
+
+.popup-style-2:target{
+  transform: scale(1);
+}
+
+.popup-style-3{
+  left:100%;
+  
+}
+
+.popup-style-3:target{
+  left:0;
+}
+
+.popup-style-4{
+  transform: rotate(180deg);
+}
+
+.popup-style-4:target{
+  transform: rotate(0deg);
+}
+
+.popup-style-5{
+  top:100%;
+  
+}
+
+.popup-style-5:target{
+  top:0;
+}
+
+.popup-style-6{
+  transform: scale(15.3);
+  
+}
+
+.popup-style-6:target{
+ transform: scale(1);
+ }
+
+.popup-style-7{
+  transform: skewY(180deg);
+   transition: all 0.7s ease-in-out;
+}
+
+.popup-style-7:target{
+ transform: skewY(0deg);
+
+ }
+ .pb_action_new {
+    margin: auto 0;
+    text-align: center;
+    margin-top: 30px;
+ }
+ .course-btn {
+    background-color:#d9671e !important;
+ 
+
+ }
+.course-btn:hover{
+  background-color: #fff !important;
+  color: #d9671e;
+  border : solid 2px #d9671e;
+}
+.course-btn-texts {
+    color : #fff;
+    font-size: 15px;
+
+}
+.card-img-nldb {
+    text-align : center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  border-radius: 2px;
+  
+}
+.dark_custom {
+ background-color : #323a45;
+}
+
+.contain-card{
+  position: relative;
+  width: 100%;
+}
+.card-center-nldb{
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.contain-card:hover .card-center-nldb{
+  opacity: 1;
+}
+
+.contain-card:hover .card-img-nldb{
+  opacity: 0.7;
+}
+.model-btn-nldb {
+font-size :30px;
+
+margin :auto 0; 
+color : red !important;
+}
+.modal-header {
+ border-bottom: 0px solid #e5e5e5 !important;
+}
+
+
+
+.countedown {
+  text-align: center;
+ margin :0 auto;
+  
+  padding: 10px;
+  background-color: #000000c4;
+  border: 2px solid #d9671e;
+  color: white;
+
+}
+
+ /* Desktop styles (400px width) */
+        @media (min-width: 768px) {
+            .countedown {
+                width: 400px;
+            }
+        }
+
+        /* Mobile styles (Full width) */
+        @media (max-width: 767px) {
+            .countedown {
+                width: 100%;
+            }
+        }
+
+
+
+.counter {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.counter div {
+  background-color: #d9671e;
+  width: 22%;
+  padding: 10px;
+  
+}
+
+span {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.countedown-text {
+   color:#fff;
+}
+
+
+.hr-color {
+border-top: 1px solid #d9671e ;
+}
+
+
+
+
+
+
+
+
+</style>
+
+</head>
+<body>
+<!--Start Header-->
+<header id="header">
+    <div id="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7 hidden-xs top-info">
+                    <span><i class="fa fa-phone"></i>Phone: +94112501701</span>
+                    <span><i class="fa fa-envelope"></i>Email: info@nldb.lk</span>
+                    <ul class="langu">
+                        <li><a href="./index.html" class="langs">English</i></a></li>
+                        <li><a href="./index si.html" class="langs">සිංහල</i></a></li>
+                        <li><a href="./index ta.html" class="langs">தமிழ்</i></a></li> 
+                    </ul>
+                </div>
+                <div class="col-sm-5 top-info">
+                    <ul>
+                        <li><a href="" class="my-tweet"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.facebook.com/nldb.lk/" class="my-facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="" class="my-skype"><i class="fa fa-skype"></i></a></li>
+                        <li><a href="" class="my-pint"><i class="fa fa-pinterest"></i></a></li>
+                        <li><a href="" class="my-rss"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="" class="my-google"><i class="fa fa-google-plus"></i></a></li>
+
+                     
+                    </ul>
+                 </div>
+   
+            </div>
+        </div>
+    </div>
+    <!-- LOGO bar -->
+    <div id="logo-bar" class="clearfix">
+        <!-- Container -->
+        <div class="container">
+            <div class="row">
+                <!-- Logo / Mobile Menu -->
+                <div class="col-xs-12">
+                    <div id="logo">
+                        <h1><a href="http://www.nldb.gov.lk/index.asp"><img src="http://www.nldb.gov.lk/images/logo.png" alt="Velocity" /></a></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Container / End -->
+    </div>
+    <!--LOGO bar / End-->
+    
+    <!-- Navigation
+    ================================================== -->
+    <div class="navbar navbar-default navbar-static-top container" role="navigation">
+        <!--  <div class="container">-->
+        <div class="row">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    
+                    <li><a href="http://www.nldb.gov.lk/index.asp">මුල් පිටුව</a></li>
+                    
+    <li><a href="about.asp" >අපි ගැන </a>
+    <ul class="dropdown-menu">
+    <li><a href="http://www.nldb.gov.lk/about.asp">අපි ගැන </a></li>
+        <li><a href="http://www.nldb.gov.lk/DirectorBoard.asp">අධ්‍යක්ෂ මණ්ඩලය</a></li> 
+        <li><a href="http://www.nldb.gov.lk/members.asp">අපගේ සාමාජිකයින්</a></li> 
+                <li><a href="http://www.nldb.gov.lk/procurements.asp">මිලදී ගැනීම්</a></li> 
+                            <!--- <li><a href="http://www.nldb.gov.lk/HeadOffice.asp">Head Office</a></li> --->
+                         <!---  <li><a href="http://www.nldb.gov.lk/FarmStaff.asp">Farms </a></li> --->
+                          <!--- <li><a href="http://www.agrimin.gov.lk/web/">Ministry</a></li> --->
+                            <li><a href="http://www.nldb.gov.lk/Projects.asp">ව්‍යාපෘති</a></li>
+                            <li><a href="https://www.facebook.com/pg/nldb.lk/photos/?tab=album&album_id=993755717305804">ගැලරිය </a></li>
+                        </ul>
+                    </li>
+                    <li><a href="http://www.nldb.gov.lk/Bungallow/BungallowMap.asp" >සංචාරක බංගලා</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://www.nldb.gov.lk/Bungallow/Nikawaratiya_Bungallow.asp">නිකවැරටිය</a></li>
+                            <li><a href="http://www.nldb.gov.lk/Bungallow/Bopaththalawa_Bungallow.asp">බෝපත්තලාව</a></li>
+                            <li><a href="http://www.nldb.gov.lk/Bungallow/Nelumwewa_Bungallow.asp">නෙළුම්වැව(පොළොන්නරුව)</a></li>
+                            <li><a href="http://www.nldb.gov.lk/Bungallow/Galpokuna_Bungallow.asp">ගල් පොකුණ</a></li>
+                            <li><a href="http://www.nldb.gov.lk/Bungallow/MLDC_Bungallow.asp">එම්. එල්.ඩී.සී.</a></li>
+                            <li><a href="http://www.nldb.gov.lk/Bungallow/Weerawila_Bungallow.asp">වීරවිල</a></li>
+                            <li><a href="http://www.nldb.gov.lk/Bungallow/Anuradhapura_Bungallow.asp">අනුරාධපුර</a></li>
+                            
+                            <li><a href="http://www.nldb.gov.lk/Bungallow/BungallowMap.asp">තවත් . . .</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li><a href="http://www.nldb.gov.lk/Farm/FarmMap.asp">ගොවිපලවල්</a>
+                        <ul class="dropdown-menu">
+                              <li><a href="http://www.nldb.gov.lk/Farm/AndigamaFarm.asp">ආඩිගම</a></li>
+                              <li><a href="http://www.nldb.gov.lk/Farm/BopathalawaFarm.asp">බෝපත්තලාව</a></li>
+                              <li><a href="http://www.nldb.gov.lk/Farm/Galpokuna Farm.asp">ගල් පොකුණ</a></li>
+                              <li><a href="http://www.nldb.gov.lk/Farm/KoulwewaFarm.asp">කොවුල්වැව</a></li>
+                              <li><a href="http://www.nldb.gov.lk/Farm/NikaweratiyaFarm.asp">නිකවැරටිය</a></li>
+                              <li><a href="http://www.nldb.gov.lk/Farm/FarmMap.asp">තවත්  . . .</a></li>
+                        </ul>
+                    </li>
+                        <li><a href="http://www.nldb.gov.lk/products/Products.asp">නිෂ්පාදන</a></li>
+                    <li>
+                        <a href="#">පශු සම්පත් ප්‍රභේද </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://www.nldb.gov.lk/Breeds/NeatCattles.asp">නීට් කැට්ල් </a></li>
+                            <li><a href="http://www.nldb.gov.lk/Breeds/BuffaloBreeds.asp">බෆලෝව් අභිජනන </a></li>
+                            <li><a href="http://www.nldb.gov.lk/Breeds/GoatsBreeds.asp">එළුවන් අභිජනනය</a></li>
+                            <li><a href="http://www.nldb.gov.lk/Breeds/PigBreeds.asp">ඌරන් අභිජනන</a></li>
+                            <li><a href="http://www.nldb.gov.lk/Breeds/SheepBreeds.asp">බැටළු අභිජනන </a></li>
+                        </ul>
+                        
+                    </li>
+                        <li><a href="#">පාඨමාලා</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="http://www.nldb.gov.lk/courses/TrainingC.asp">ප්‍රායෝගික පුහුණු සහ   &amp;
+                                    කෙටිකාලීන පුහුණු වැඩසටහන</a></li>
+                                <li><a href="http://www.nldb.gov.lk/courses/ShortTC.asp">කෙටි කාලීන පුහුණු වැඩසටහන </a></li>
+    
+                            </ul>
+                        </li>
+                    <li><a href="http://www.nldb.gov.lk/contact.asp">විමසීම්</a>
+                        <ul class="dropdown-menu">
+                           <li><a href="http://www.nldb.gov.lk/contact.asp">අමතන්න</a></li>
+    
+                        </ul>
+                    </li>
+    
+                        <li><a href="#">බාගත කිරීම්</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="download/Assistantfarmmanager.pdf" download>සහකාර කළමනාකරු පුරප්පාඩු  </a></li>
+                                  <li><a href="download/Purchase-of-Feed-Ingredients-for-NLDB-Farms.pdf" download> සඳහා ආහාර අමුද්රව්ය මිලදී ගැනීම</a></li>
+                                  <li><a href="download/Purchase-of-Feed ingredient-(Grain Maize)-for-NLDB-Farms.pdf" download>NLDB ගොවිපලවල් සඳහා ආහාර අමුද්රව්ය (ධාන්ය බඩ ඉරිඟු) මිලදී ගැනීම</a></li>
+                              <li><a href="download/Purchase-of-Broiler.pdf" download>බ් රොයිලර් අභිජනනය කරන්නා වූ දෙමාපිය පැටවුන් මිලදී ගැනීම</a></li>   
+                              <li><a href="download/Application-NVQ-4-LT.pdf" download>අයදුම්පත NVQ-4 LT.PDF</a></li>  
+                              <li><a href="download/Annual-Report-2018.pdf" download>වාර්ෂික වාර්තාව 2018.PDF </a></li>
+    
+    
+                            </ul>
+                        </li>
+    
+              </li>
+        <li><a href="#">පුවත්</a>
+                            <ul class="dropdown-menu">
+                                  <li><a href="https://www.youtube.com/live/1JC_MmBVX3k?si=X03rO9SgSvTRhztS" download>බිග් ‌ෆෝකස් | වියළි කාලගුණය මෙරට පශු ක්ෂේත්‍රයට කරන බලපෑම</a></li>
+                                   <li><a href="https://www.facebook.com/nldb.lk/posts/pfbid02rHkxy3MTkHo858gZDY49TYwKdftmz2rJwaMzFmbfQ9C2EZMzi1A3gyf3KDrHJe3ql?notif_id=1705903150330458&notif_t=feedback_reaction_generic&ref=notif" download>ජාතික පශු සම්පත් සංවර්ධන මණ්ඩලය විසින් ප්‍රථම වරට ආරම්භ කරන ලද පශු සම්පත් තාක්ෂණික ශිල්පි පාඨමාලාව</a></li>
+       
+                                                
+    
+    
+                            </ul>
+                        </li>
+    
+                    </li>
+                      
+                    <!-- <li><a href="http://www.nldb.gov.lk/resentNews.asp">Resent Posts</a></li> -->
+                    <!-- <li><a href="http://www.nldb.gov.lk/siteMap.asp">Site map</a></li> -->
+                    
+              
+                </ul> 
+              
+            </div>
+        </div><!--/.row -->
+        <!--</div>--><!--/.container -->
+    
+    </div>
+</header>
+<!--End Header-->
+
+<!--start wrapper-->
+<section class="wrapper">
+	
+    <div class="slider-wrapper">
+        <div class="slider">
+            <div class="fs_loader"></div>
+
+
+
+
+
+
+          
+<!---- Video Slider --->
+
+			<div class="slide">
+	
+	<video width="1920" height="auto" autoplay muted loop id="myVideo">
+                        <source src="video/video web.mp4" type="video/mp4">
+                        <source src="mov_bbb.ogg" type="video/ogg">
+                        ඔබගේ බ්‍රවුසරය HTML වීඩියෝ සඳහා සහය නොදක්වයි.
+                         </video>
+                <p class="slide-heading" data-position="130,370" data-in="top" data-out="top" data-ease-in="easeOutBounce" data-delay="1500">NLDB ගොවිපලවල්</p>
+
+                <p class="sub-line" data-position="230,370" data-in="right" data-out="left" data-delay="2500">NLDB ගොවිපලවලින් නැවුම් කිරි නිෂ්පාදන </p>
+				
+				 <!-- <img src="images/fraction-slider/Response.png" width="500" height="auto" data-position="60,1200" data-in="bottomLeft" data-out="fade" style="width:auto; height:auto" data-delay="500"> -->
+                
+<!-- Tender File Location -- Tenders/ Tenders.asp --> 
+
+<a href="http://www.nldb.gov.lk/tenders/Tenders.asp" class="btn btn-default2 btn-lg" data-position="320,370" data-in="bottom"  data-out="bottom" data-delay="3500" >ප්‍රසම්පාදන සහ ටෙන්ඩර්</a>
+
+            </div>
+			
+
+        </div>
+    </div>
+    <!--End Slider-->
+
+<!---
+<section class="promo_box dark">
+        <div class="container">
+            <div class="row">
+            
+ <div class="col-sm-12">
+ <div class="promo_content">
+   
+ <div class="countedown">
+        <h2 class="countedown-text">Livestock Show 2023</h2>
+        <div class="counter">
+          <div>
+            <span class="days">00</span>
+            <h3>days</h3>
+          </div>
+          <div>
+            <span class="hours">00</span>
+            <h3>hrs</h3>
+          </div>
+          <div>
+            <span class="minutes">00</span>
+            <h3>mins</h3>
+          </div>
+          <div>
+            <span class="seconds">00</span>
+            <h3>secs</h3>
+          </div>
+        </div>
+      </div>
+
+</div>
+</div>
+
+</div>
+</div>
+</section>
+--->
+
+<!---
+<section class="promo_box dark_custom">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-4">
+              <div class = "contain-card">
+                   <img class ="card-img-nldb" src="images/card/english.jpeg" alt="NLDB">
+                 <div class = "card-center-nldb">
+<button type="button" class="btn btn-lg btn-default course-btn" data-toggle="modal" data-target=".english"><i class="fa fa-eye"></i>  Full Screen</button>    
+                </div>
+              </div>
+           </div>
+
+  <div class="col-sm-4">
+              <div class = "contain-card">
+                   <img class ="card-img-nldb" src="images/card/sinhala.jpeg" alt="NLDB">
+                 <div class = "card-center-nldb">
+<button type="button" class="btn btn-lg btn-default course-btn" data-toggle="modal" data-target=".sinhala"><i class="fa fa-eye"></i>  Full Screen</button>  
+                </div>
+              </div>
+           </div>
+
+  <div class="col-sm-4">
+              <div class = "contain-card">
+                   <img class ="card-img-nldb" src="images/card/tamil.jpeg" alt="NLDB">
+                 <div class = "card-center-nldb">
+<button type="button" class="btn btn-lg btn-default course-btn" data-toggle="modal" data-target=".tamil"><i class="fa fa-eye"></i>  Full Screen</button>  
+                </div>
+              </div>
+           </div>
+
+
+
+
+
+        </div>
+    </div>
+</section> --->
+
+
+<section class="promo_box dark">
+<div class="container">
+	<div class="row">
+      
+
+<h3 class="sponsor-text"> පශු සම්පත් තාක්ෂණ ශිල්පී පාඨමාලාව 1 වන කාණ්ඩයම  (NVQ LEVEL 4) 2024  </h3>
+<div class="">
+      <!-- Carousel
+      ================================================== -->            
+      <div id="myCarousel" class="carousel slide">
+          <div class="carousel-inner">
+              <div class="item active">
+                  <div class="row">
+                      <div class="col-md-3">
+                          <div class="thumbnail sponsor-images">
+                            <img src="images/bslider/1.1.jpg" alt="Slide11">
+                            
+                          </div>        
+                      </div>
+                      <div class="col-md-3">
+                          <div class="thumbnail sponsor-images">
+                            <img src="images/bslider/1.2.jpg" alt="Slide12">
+                            
+                          </div> 
+                      </div>
+                      <div class="col-md-3">
+                          <div class="thumbnail sponsor-images">
+                            <img src="images/bslider/1.3.jpg" alt="Slide13">
+                          
+                          </div> 
+                      </div>
+                      <div class="col-md-3">
+                          <div class="thumbnail sponsor-images">
+                            <img src="images/bslider/1.4.jpg" alt="Slide14">
+                           
+                          </div> 
+                      </div>
+                  </div>
+              </div>
+              <div class="item">
+                  <div class="row">
+                      <div class="col-md-3">
+                          <div class="thumbnail sponsor-images">
+                            <img src="images/bslider/1.5.jpg" alt="Slide21">
+                           
+                          </div>        
+                      </div>
+                      <div class="col-md-3">
+                          <div class="thumbnail sponsor-images">
+                            <img src="images/bslider/1.6.jpg" alt="Slide22">
+                           
+                          </div> 
+                      </div>
+                      <div class="col-md-3">
+                          <div class="thumbnail sponsor-images">
+                            <img src="images/bslider/1.7.jpg" alt="Slide23">
+                           
+                          </div> 
+                      </div>
+                      <div class="col-md-3">
+                          <div class="thumbnail sponsor-images">
+                            <img src="images/bslider/1.8.jpg" alt="Slide24">
+                         
+                          </div> 
+                      </div>
+                  </div>
+              </div>
+              <div class="item">
+                  <div class="row">
+                      <div class="col-md-3">
+                          <div class="thumbnail sponsor-images">
+                            <img src="images/bslider/1.9.jpg" alt="Slide31">
+                         
+                          </div>        
+                      </div>
+                      <div class="col-md-3">
+                          <div class="thumbnail sponsor-images">
+                            <img src="images/bslider/1.10.jpg" alt="Slide32">
+                          
+                          </div> 
+                      </div>
+                      <div class="col-md-3">
+                          <div class="thumbnail sponsor-images">
+                            <img src="images/bslider/1.11.jpg" alt="Slide33">
+                            
+                          </div> 
+                      </div>
+                      <div class="col-md-3">
+                          <div class="thumbnail sponsor-images">
+                            <img src="images/bslider/1.12.jpg" alt="Slide34">
+                           
+                          </div> 
+                      </div>
+                     </div>.
+                   </div>
+                  <div class="item">
+                  <div class="row">
+                           <div class="col-md-3">
+                          <div class="thumbnail sponsor-images">
+                            <img src="images/bslider/1.13.jpg" alt="Slide34">
+                           
+                          </div> 
+                      </div>
+
+                           <div class="col-md-3">
+                          <div class="thumbnail sponsor-images">
+                            <img src="images/bslider/1.14.jpg" alt="Slide34">
+                           
+                          </div> 
+                      </div>
+
+                            <div class="col-md-3">
+                          <div class="thumbnail sponsor-images">
+                            <img src="images/bslider/1.15.jpg" alt="Slide34">
+                           
+                          </div> 
+                      </div>
+
+                         <div class="col-md-3">
+                          <div class="thumbnail sponsor-images">
+                            <img src="images/bslider/1.16.jpg" alt="Slide34">
+                           
+                          </div> 
+                      </div>
+                      </div>
+                      </div>
+                   <div class="item">
+                  <div class="row">
+                          <div class="col-md-3">
+                          <div class="thumbnail sponsor-images">
+                            <img src="images/bslider/1.17.jpg" alt="Slide34">
+                           
+                          </div> 
+                      </div>
+
+                          <div class="col-md-3">
+                          <div class="thumbnail sponsor-images">
+                            <img src="images/bslider/1.18.jpg" alt="Slide34">
+                           
+                          </div> 
+                      </div>
+                          <div class="col-md-3">
+                          <div class="thumbnail sponsor-images">
+                            <img src="images/bslider/1.19.jpg" alt="Slide34">
+                           
+                          </div> 
+                      </div>
+
+                          <div class="col-md-3">
+                          <div class="thumbnail sponsor-images">
+                            <img src="images/bslider/1.20.jpg" alt="Slide34">
+                           
+                          </div> 
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+<br>
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="fa fa-chevron-left fa-2x"></i></a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="fa fa-chevron-right fa-2x"></i></a>
+          
+          <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+              <li data-target="#myCarousel" data-slide-to="3"></li>
+              <li data-target="#myCarousel" data-slide-to="4"></li>
+          </ol>                
+      </div><!-- End Carousel --> 
+  </div><!-- End Well -->
+
+
+
+    </div>
+</div>
+</section>
+
+ <section class="promo_box dark">
+        <div class="container">
+            <div class="row">
+
+
+ <div class="col-sm-12">
+                    <div class="promo_content">
+<hr class="hr-color">
+                        <h3>පශු සම්පත් තාක්ෂණවේදී  පාඨමාලාව </h3>
+                        <p>කරුණාකර පශු සම්පත් තාක්ෂණවේදී  පාඨමාලාව සඳහා ඉල්ලුම් පත්‍රය බාගත කරන්න</p>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="pb_action_new">
+                        <h4 class="course-btn-texts">වෙළඳ දැන්වීම </h4>
+                        <a class="btn btn-lg btn-default course-btn" href=""  data-toggle="modal" data-target=".courselt">
+                            <i class="fa fa-download"></i>
+                            දැන්වීම බලන්න  </a>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="pb_action_new">
+                        <h4 class="course-btn-texts">අයදුම්පත බාගත කරන්න </h4>
+                        <a class="btn btn-lg btn-default course-btn" href="download/Application-NVQ-4-LT.pdf" target="_blank">
+                            <i class="fa fa-download"></i>
+                            බාගත කරගන්න 
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+<!--- Card View --->
+
+    <!--start info service-->
+    <section class="info_service">
+        <div class="container">
+		            <div class="row sub_content">
+                <div class="rs_box">
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <div class="serviceBox_1">
+                            <div class="icon_service">
+                                <i class="fa fa-gear"></i>
+                                <h3>නිෂ්පාදන</h3>
+                            </div>
+                            <div class="fr_content">
+                                <p>අපි ලොව පුරා කිරි නිෂ්පාදන සපයන්නෙමු. සියලුම නිෂ්පාදන පාරිභෝගික සහ වෙළඳපල අවශ්‍යතා අනුව විවිධ හැඩයන් සහ ප්‍රමාණවලින් ඇසුරුම් කර ඇත.</p>
+                                <a class="read" href="#">වැඩි දුරටත් කියවන්න……</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <div class="serviceBox_1">
+                            <div class="icon_service">
+                                <i class="fa fa-volume-off"></i>
+                                <h3> ගොවිපලවල්</h3>
+                            </div>
+                            <div class="fr_content">
+                                <p>ජා.ප.ස.ම  දැනට පශු සම්පත් සහ පොල් වගාවන් පවත්වාගෙන යනු ලබන පශු සම්පත් සහ භෝග ඒකාබද්ධ ගොවිපල 31 ක් කළමනාකරණය කරයි. ගොවීන්ට ප්‍රායෝගික හා න්‍යායාත්මක දැනුම ලබාදීම සඳහා පුහුණු මධ්‍යස්ථානයක් ද මණ්ඩලය සතුව ඇත.</p>
+                                <a class="read" href="Farm/FarmMap.asp">වැඩි දුරටත් කියවන්න……</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <div class="serviceBox_1">
+                            <div class="icon_service">
+                                <i class="fa fa-suitcase"></i>
+                                <h3>සංචාරක බංගලා </h3>
+                            </div>
+                            <div class="fr_content">
+                                <p>NLDB නිකවැරටිය, බෝපතලාව, ගල්පොකුණ, නෙළුම්වැව, MLDC, වීරවිල සහ අනුරාධපුරයේ සංචාරක බංගලා ක්‍රියාත්මක කරයි. මෙම බංගලා වෙන් කිරීමට  සහ  වැඩි විස්තර සඳහා සඳුදා සිට සිකුරාදා දක්වා කාර්යාල වේලාවන් තුළ  +94112501701/2 අංකයට අමතන්න  </p>
+                                <a class="read" href="http://www.nldb.gov.lk/Bungallow/BungallowMap.asp">වැඩි දුරටත් කියවන්න……</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row sub_content">
+                <div class="rs_box">
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <div class="serviceBox_1">
+                            <div class="icon_service">
+                                <i class="fa fa-laptop"></i>
+                                <h3>අපගේ ව්යාපෘති</h3>
+                            </div>
+                            <div class="fr_content">
+                                <p>පශු සම්පත් හා කිරි ආශ්‍රිත නිෂ්පාදනයෙන් දේශය ස්වයංපෝෂිත කරලීමේ ජාතික මෙහෙවරට උරදෙනු වස්, නවීන තාක්ෂණ හා නවෝත්පාදන ක්‍ර‍ම තුලින් ගුණාත්මක සත්ව, කෘෂිකාර්මික හා කිරි ආශ්‍රිත නිෂ්පාදන ප්‍ර‍ශස්ථ මට්ටමින් පවත්වාගෙන යාමට ජාතික පශු සම්පත් මණ්ඩලය කැපවී සිටී.</p>
+                                <a class="read" href="#">වැඩි දුරටත් කියවන්න……</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <div class="serviceBox_1">
+                            <div class="icon_service">
+                                <i class="fa fa-heart"></i>
+                                <h3>අපේ මෙහෙවර </h3>
+                            </div>
+                            <div class="fr_content">
+                                <p>පශු සම්පත් හා කිරි ආශ්‍රිත නිෂ්පාදනයෙන් දේශය ස්වයංපෝෂිත කරලීමේ ජාතික මෙහෙවරට උරදෙනු වස්, නවීන තාක්ෂණ හා නවෝත්පාදන ක්‍ර‍ම තුලින් ගුණාත්මක සත්ව, කෘෂිකාර්මික හා කිරි ආශ්‍රිත නිෂ්පාදන ප්‍ර‍ශස්ථ මට්ටමින් පවත්වාගෙන යාමට ජාතික පශු සම්පත් මණ්ඩලය කැපවී සිටී.</p>
+                                <a class="read" href="#">වැඩි දුරටත් කියවන්න……</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <div class="serviceBox_1">
+                            <div class="icon_service">
+                                <i class="fa fa-trophy"></i>
+                                <h3>අපගේ දැක්ම</h3>
+                            </div>
+                            <div class="fr_content">
+                                <p>පශු සම්පත් තුළින් ඉසුරුමත් දිවිපෙවෙතක් උදෙසා ගුණාත්මක සත්ව හා කෘෂි නිෂ්පාදන දැයට දායාද කරන දේශයේ පශු සම්පත් නිපැයුම්කරු වීම.</p>
+                                <a class="read" href="#">වැඩි දුරටත් කියවන්න……</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--end info service-->
+
+    <!--Start recent work-->
+	<!--#include file="products.inc"-->
+    <!--Start recent work-->
+
+    <!-- Parallax with Testimonial -->
+    <section class="parallax parallax-1">
+        <div class="container">
+            <!--<h2 class="center">Testimonials</h2>-->
+            <div class="row">
+                <div id="parallax-testimonial-carousel" class="parallax-testimonial carousel">
+                    <div class="carousel-inner">
+                        <div class="active item">
+                            <div class="parallax-testimonial-item">
+                                <blockquote>
+                                    <p>24 පැය කඩිනම් ආචාරශීලී සේවාවක් සහ ගැනුම්කරුවන් සමඟ එක්ව වැඩ කිරීම</p>
+                                </blockquote>
+								<div class="parallax-testimonial-review">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="parallax-testimonial-review">
+                                    <img src="images/testimonials/1.png" alt="testimonial">
+                                    <span>පැය 24 සේවය </span>
+                                    <small>NLDB.</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="parallax-testimonial-item">
+                                <blockquote>
+                                    <p>අපි අපගේ නිෂ්පාදනය ලොව පුරා ඕනෑම වේලාවක ඕනෑම ගමනාන්තයකට වෙඩි තැබීමේ වේලාවක ලබා දෙන්නෙමු.</p>
+                                </blockquote>
+                                 <div class="parallax-testimonial-review">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="parallax-testimonial-review">
+                                    <img src="images/testimonials/2.png" alt="testimonial">
+                                    <span>ඉක්මන් බෙදාහැරීම</span>
+                                    <small>ඒයාර් ෆෝවඩ් ඇන්ඩ් සී</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="parallax-testimonial-item">
+                                <blockquote>
+                                    <p>කරුණාකර ඉක්මන් විමසීම් පෝරමය සම්පූර්ණ කරන්න සහ විස්තර ලැබුණු පසු, අපි ඉක්මනින් ඔබ වෙත පැමිණෙන්නෙමු.</p>
+                                </blockquote>
+                                <div class="parallax-testimonial-review">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="parallax-testimonial-review">
+                                    <img src="images/testimonials/3.png" alt="testimonial">
+                                    <span>ඉක්මන් විමසුම්</span>
+                                    <small>ඊමේල් & ටෙලි.</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ol class="carousel-indicators">
+                        <li data-slide-to="0" data-target="#parallax-testimonial-carousel" class=""></li>
+                        <li data-slide-to="1" data-target="#parallax-testimonial-carousel" class="active"></li>
+                        <li data-slide-to="2" data-target="#parallax-testimonial-carousel" class=""></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end : Parallax with Testimonial -->
+
+    <section class="feature_bottom">
+        <div class="container">
+            <div class="row sub_content">
+                <div class="col-lg-6 ">
+                    <div class="dividerHeading">
+                        <h4><span>අපව තෝරා ගන්නේ ඇයි ?</span></h4>
+                    </div>
+                    <p>NLDB යනු ශ්‍රී ලංකාවේ පශු සම්පත් අංශයයේ ප්‍රමුඛතම සැපයුම්කරුවෙකු වන අතර දේශීය වෙළඳපොලේ සහ අපනයනයේ ප්‍රමුඛ කාර්යභාරයක් ඉටු කරයි. එය ශ්‍රී ලංකාවේ හොඳ විකුණුම් ආදායමක් ඇති සමාගමක් පමණක් නොව, ශ්‍රී ලංකාවේ ප්‍රමුඛ පෙළේ වෙළෙද ආයතනයකි. </p>
+					<p>NLDB දැඩි තරඟකාරීත්වයක් හරහා ශක්තිමත් වෙළද ආයතනයක්  වීමටත් කිරි සහ කෘෂිකාර්මික නිෂ්පාදනවල ප්‍රධාන නිෂ්පාදය කිරීමේ  සහ බෙදාහැරීමේ ප්‍රධානතම ආයතනයක් වීමටත් කැපවී සිටී. NLDB කෘෂිකාර්මික භාණ්ඩ, කිරි සහ ගව පාලන ගොවිපල සම්බන්ධයෙන් පුළුල් පරාසයක ක්‍රියාකාරකම්වල නිරතව සිටී.</p>
+					
+                    <ul class="list_style circle">
+                        <li><a href="#"> 	පශු සම්පත් කර්මාන්තයේ වසර 45 කට වැඩි පළපුරුද්ද.</a></li>
+                        <li><a href="#"> 	ඉහල ප්‍රෝටීන් සහ ශක්ති මට්ටම්</a></li>
+                        <li><a href="#"> 	නිරන්තරයෙන් අපගේ තරඟකරුවන්ගේ වෙළඳපල මිලට වඩා මිල  අඩුය</a></li>
+                        <li><a href="#"> 	දැනුමැති, මිත්රශීලී සහ වෘත්තීය කාර්ය මණ්ඩලය</a></li>
+                        <li><a href="#"> 	අපි රට පුරා විශ්වාසනීය සේවාවක් සපයන්නෙමු</a></li>
+                    </ul>
+                </div>
+
+                <!-- TESTIMONIALS -->
+                <div class="col-lg-6 ">
+                    <div class="dividerHeading">
+                        <h4><span>වාර්ෂික ආදායම</span></h4>
+                    </div>
+
+                    <ul class="progress-skill-bar mrg-0">
+						<li>
+                            <span class="lable">1%</span>
+                            <div class="progress_skill">
+                                <div data-height="100" role="progressbar" data-value="21" class="bar" style="width: 0px; height: 0px;">
+                                    බැටළුවන් 
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="lable">7%</span>
+                            <div class="progress_skill">
+                                <div data-height="100" role="progressbar" data-value="27" class="bar" style="width: 0px; height: 0px;">
+                                    වෙනත් Misc.Projects
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="lable">25%</span>
+                            <div class="progress_skill">
+                                <div data-height="100" role="progressbar" data-value="45" class="bar" style="width: 0px; height: 0px;">
+                                    පොල් සහ කොප්රා 
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="lable">55%</span>
+                            <div class="progress_skill">
+                                <div data-height="100" role="progressbar" data-value="75" class="bar" style="width: 0px; height: 0px;">
+                                    පිරිසිදු ගවයින් සහ මී හරකුන් 
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="lable">7%</span>
+                            <div class="progress_skill">
+                                <div data-height="100" role="progressbar" data-value="27" class="bar" style="width: 0px; height: 0px;">
+                                    බ්‍රොයිලර් මව් පිය පරම්පරාවේ කුකුලන් 
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="lable">1%</span>
+                            <div class="progress_skill">
+                                <div data-height="100" role="progressbar" data-value="21" class="bar" style="width: 0px; height: 0px;">
+                                    බිත්තර දමන මව් පිය පරම්පරාවේ කුකුලන්  
+                                </div>
+                            </div>
+                        </li>
+						<li>
+                            <span class="lable">1%</span>
+                            <div class="progress_skill">
+                                <div data-height="100" role="progressbar" data-value="21" class="bar" style="width: 0px; height: 0px;">
+                                    ඌරන් 
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div><!-- TESTIMONIALS END -->
+            </div>
+        </div>
+    </section>
+	<section class="content elements">
+        <div class="container">
+	        <div class="row sub_content">
+            <div class="col-lg-6 col-md-6 col-sm-6">		
+                <div class="dividerHeading">
+                <!---    <h4><span>Farm Visits Are Temporarily suspended</span></h4> --->
+                </div>
+           
+          <!---      <div class="alert alert-danger alert-dismissable">
+                    <strong> Island wide All NLDB farm Visits are temporarily suspended</strong>  Due To Foot And Mouth Disease(FMD).Foot and mouth disease (FMD) is a severe, highly contagious viral disease of livestock . The disease affects cattle, swine, sheep, goats ,buffalo and other cloven-hoofed ruminants. Intensively reared animals are more susceptible to the disease than traditional breeds.
+
+				</div> --->
+				 <div class="dividerHeading">
+                    <h4><span>සාමාන්‍ය උපදෙස් </span></h4>
+                </div>
+				         <ul class="list_style square">
+                            <li><a href="#"> වාහන/පුද්ගලයින්/යන්ත්‍ර සූත්‍ර/ආහාර ආදිය.. ගොවිපල තුළට හෝ වත්මන් FMD පැතිර යන ප්‍රදේශ දෙසට ගමන් කිරීම වාර්තා කිරීම.</a></li>
+                            <li><a href="#">ගොවිපළට අමුත්තන් ඇතුළුවීම පාලනය කිරීම..</a></li>
+                            <li><a href="#"> අනවසර පුද්ගලයින්/සතුන්/වාහනවලට ඇතුළුවීම සීමා කිරීම සඳහා ගේට්ටු මත දැන්වීම් ප්‍රදර්ශනය කිරීම</a></li>
+                        </ul>
+				<div class="serviceBox_1">
+					<div class="fr_content">
+							<a class="read" href="download/farms/FMD Alert 3.pdf">තවත් කියවන්න</a>
+					</div>
+				</div>
+
+
+		
+
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="dividerHeading">
+                    <h4><span>බාගත කිරීම්</span></h4>
+                </div>
+				          <ul class="list_style play">
+
+
+                            <li><a href="download/farms/Application Form for Farm Visits .docx">ගොවිපල චාරිකා සඳහා ඉල්ලුම් පත්‍රය &nbsp;&nbsp; [අයදුම්පත්‍රය]</a></li>
+                            <li><a href="download/courses/AppTraining.docx">කෙටි කාලීන පුහුණු වැඩසටහන [අයදුම්පත්‍රය]</a></li></br>
+							 <li><a href="download/breeds/Livestock Application Tamil English Sinhala.pdf">පශු සම්පත් නිකුත් කිරීම සඳහා වන අයදුම්පත (PDF) PDF[බාගත කරන්න]</a></li>
+							 <li><a href="download/breeds/Livestock Application Tamil English Sinhala .docx">පශු සම්පත් නිකුත් කිරීම සඳහා ඉල්ලුම් පත්රය (WORD)[බාගත කරන්න]</a></li>
+                            <li><a href="download/Bungalow/Application-for-Circuit-Bungalow-Reservation-(English).pdf"> බංගලා වෙන්කිරීමේ පෝරමය PDF [ඉංග්‍රීසි]</a></li>
+							<li><a href="download/Products/nldb-outlets.pdf">NLDB හි කිරි අලෙවිසැල් [බාගත කරන්න]</a></li>
+							<li><a href="download/Products/sale-centers.pdf">NLDB විකුණුම් මධ්‍යස්ථාන [බාගත කරන්න]</a></li>
+							<li><a href="download/Products/How to purchase breeding materials and Poultry chicks.pdf">අභිජනන ද්‍රව්‍ය මිලදී ගන්න [බාගත කරන්න]</a></li>
+							<li><a href="download/breeds/Application for animal issue - Sinhala.pdf">සත්ව ගැටළු සඳහා අයදුම්පත[සිංහල] [බාගත කරන්න]</a></li>
+							<li><a href="download/breeds/application for animal issue-English.pdf"> ගැටළු සඳහා ඉල්ලුම්පත්‍රය[ඉංග්‍රීසි] [බාගත කරන්න]</a></li>
+
+	<li><a href="download/Bungalow/Application-for-Circuit-Bungaow-Reservation-(Sinhala).pdf">සර්කිට් බංගලාව වෙන්කරවා ගැනීම සඳහා ඉල්ලුම්පත්‍රය [සිංහල] [බාගත කරන්න]</a></li>
+
+	<li><a href="download/Bungalow/Application-for-Circuit-Bungalow-Reservation-(English).pdf">සංචාරක බංගලාව වෙන්කරවා ගැනීම සඳහා ඉල්ලුම්පත්‍රය [ඉංග්‍රීසි] [බාගත කරන්න]</a></li>
+
+	<li><a href="download/Annual Report 2018.pdf">සංචාරක බංගලා වෙන්කරවා ගැනීම සඳහා ඉල්ලුම්පත්‍රය [ඉංග්‍රීසි] [බාගත කරන්න]</a></li>
+	<li>
+<div class="">
+<a href="#popup1">පශු සම්පත් තාක්ෂණ ශිල්පී පාඨමාලාව [ බාගත ]</a>
+
+</div>
+<!--popup1-->
+<div id="popup1" class="popup-container">
+  <div class="popup-content">
+    <a href="#" class="close">&times;</a>
+<center>
+<a href ="images/course/course01.jpeg" download><button class="buttonn"><span>Download Now</span></button></a>
+<br></br> 
+    <img src="images/course/course01.jpeg" style ="width : 600px; height : 600px; margin : 0 auto;" alt="Course">
+</center>
+  </div>
+</div>
+ </li>
+
+
+                        </ul>
+
+				</div>
+
+									
+								
+
+			</div> <!--./row-->
+		</div>
+	</section>
+
+<!---
+<section class="team">
+        <div class="container">
+            <div class="row  sub_content">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="dividerHeading">
+                        <h4><span>Advertisement</span></h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="our-team">
+                     <div id="card" style = "border : solid  2px #8CBE45; border-radius: 7px 7px 0 0;">
+  <img id="img" src="images/coconut-bg.jpg">
+  <h3 id="title">Value Addition for Coconut</h3>
+  <div id="title"> <a href ="download/EOI-coconut.pdf" download><button class="buttonn"><span>Download Now</span></button></a></div>
+   <p id="desc">closing date 31st March 2023</p>
+</div>
+                    </div>
+                </div>
+				
+            </div>
+            </div>
+        </div>
+    </section> --->
+
+
+
+    <section class="team">
+        <div class="container">
+            <div class="row  sub_content">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="dividerHeading">
+                        <h4><span>කණ්ඩායම හමුවන්න</span></h4>
+                    </div>
+                </div>
+                <div class="col-md-3 ">
+                    <div class="our-team">
+                        <div class="pic">
+                            <img src="images/teams/amaraweera.png" alt="profile img">
+                            <div class="social_media_team">
+                                <ul class="team_social">
+                                    <li><a class="fb" href="https://www.facebook.com/maluthgamage/" data-placement="top" data-toggle="tooltip" title="Facbook"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a class="twtr" href="#." data-placement="top" data-toggle="tooltip" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a class="gmail" href="#." data-placement="top" data-toggle="tooltip" title="Google"><i class="fa fa-google-plus"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="team_prof">
+                            <h3 class="designation">ගරු. මහින්ද අමරවීර<small>ඇමැති</small></h3><br/>
+                            <p class="description">කෘෂිකර්ම ඇමැති </p>
+                        </div>
+                    </div>
+                </div>
+				<div class="col-md-3 ">
+                    <div class="our-team">
+                        <div class="pic">
+                            <img src="images/teams/dbherath.png" alt="profile img">
+                            <div class="social_media_team">
+                                <ul class="team_social">
+                                    <li><a class="fb" href="https://www.facebook.com/db.herath.1" data-placement="top" data-toggle="tooltip" title="Facbook"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a class="twtr" href="#." data-placement="top" data-toggle="tooltip" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a class="gmail" href="#." data-placement="top" data-toggle="tooltip" title="Google"><i class="fa fa-google-plus"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="team_prof">
+                            <h3 class="designation">ගරු. ඩී බී හේරත්<small> රාජ්‍ය ඇමති</small></h3><br/>
+                            <p class="description">පශු සම්පත් සහ ගොවිපල ප්‍රවර්ධනය සහ කිරි සහ බිත්තර ආශ්‍රිත කර්මාන්ත </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 ">
+                    <div class="our-team">
+                        <div class="pic">
+                            <img src="images/teams/SIRIL.png" alt="profile img">
+                            <div class="social_media_team">
+                                <ul class="team_social">
+                                    <li><a class="fb" href="https://www.facebook.com/nldbs" data-placement="top" data-toggle="tooltip" title="Facbook"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a class="twtr" href="#." data-placement="top" data-toggle="tooltip" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a class="gmail" href="#." data-placement="top" data-toggle="tooltip" title="Google"><i class="fa fa-google-plus"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="team_prof">
+                            <h3 class="designation">මහාචාර්ය එච්.ඩබ්ලිව්.සිරිල් <small>සභාපති</small></h3><br/>
+                            <p class="description">ශ්‍රී ලංකා පේරාදෙණිය විශ්වවිද්‍යාලය. <br/><br/><br/></p>
+                        </div>
+                    </div>
+                </div>
+        <div class="col-md-2 ">
+                    <div class="our-team">
+                        <div class="pic">
+                            <img src="images/teams/Duminda.png" alt="profile img">
+                            <div class="social_media_team">
+                                <ul class="team_social">
+                                    <li><a class="fb" href="https://www.facebook.com/nldbs" data-placement="top" data-toggle="tooltip" title="Facbook"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a class="twtr" href="#." data-placement="top" data-toggle="tooltip" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a class="gmail" href="#." data-placement="top" data-toggle="tooltip" title="Google"><i class="fa fa-google-plus"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                       <div class="team_prof">
+                            <h3 class="designation">දුමින්ද රත්නායක මහතා<small> (නීතිඥ) උප සභාපති</small></h3><br/>
+                            <p class="description">ජාතික පශු සම්පත් සංවර්ධන මණ්ඩලය <br/><br/><br/><br/></p>
+                        </div> 
+                    </div>
+                </div>
+
+                <div class="col-md-2 ">
+                    <div class="our-team">
+                        <div class="pic">
+                            <img src="images/teams/disnaka.png" alt="profile img">
+                            <div class="social_media_team">
+                                <ul class="team_social">
+                                    <li><a class="fb" href="https://www.facebook.com/nldbs" data-placement="top" data-toggle="tooltip" title="Facbook"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a class="twtr" href="#." data-placement="top" data-toggle="tooltip" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a class="gmail" href="#." data-placement="top" data-toggle="tooltip" title="Google"><i class="fa fa-google-plus"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                       <div class="team_prof">
+                            <h3 class="designation">ආචාර්ය කේ.ජී.ජේ. එස් දිස්නක<small> සාමාන්‍යාධිකාරී</small></h3><br/>
+                            <p class="description">ජාතික  පශු සම්පත් සංවර්ධන මණ්ඩලය. <br/><br/><br/><br/></p>
+                        </div> 
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </section>
+
+
+    <section class="clients">
+        <div class="container">
+            <div class="row sub_content">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="dividerHeading">
+                        <h4><span>අපගේ සේවාදායකයෝ</span></h4>
+
+                    </div>
+
+                    <div class="our_clients">
+                        <ul class="client_items clearfix">
+                            <li class="col-sm-3 col-md-3 col-lg-3"><a href="https://pelwattedairy.com/"  data-placement="bottom" data-toggle="tooltip" title="Client 1" ><img src="images/clients/1.png" alt="palawaththa" /></a></li>
+                            <li class="col-sm-3 col-md-3 col-lg-3"><a href="https://www.lmfgroup.lk/" data-placement="bottom" data-toggle="tooltip" title="Client 2" ><img src="images/clients/2.png" alt="Lanka Milk Foods" /></a></li>
+                            <li class="col-sm-3 col-md-3 col-lg-3"><a href="http://www.milco.lk/" data-placement="bottom" data-toggle="tooltip" title="Client 3" ><img src="images/clients/3.png" alt="Milco Private Limited" /></a></li>
+                            <li class="col-sm-3 col-md-3 col-lg-3"><a href="http://www.cargillsceylon.com/" data-placement="bottom" data-toggle="tooltip" title="Client 4" ><img src="images/clients/4.png" alt="cargills food city" /></a></li>
+                        </ul><!--/ .client_items-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</section><!--end wrapper-->
+
+<!--Model Contain Livestock Show OCT 2023 Application-->
+
+<!--Model 01-->
+<div class="modal fade english" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close model-btn-nldb" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+ <div class="modal-body">
+    <img class ="card-img-nldb" src="images/card/english.jpeg" alt="NLDB">
+</div>
+    </div>
+  </div>
+</div>
+<!--Model 02-->
+<div class="modal fade sinhala" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close model-btn-nldb" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+ <div class="modal-body">
+    <img class ="card-img-nldb" src="images/card/sinhala.jpeg" alt="NLDB">
+</div>
+    </div>
+  </div>
+</div>
+<!--Model 03-->
+<div class="modal fade tamil" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close model-btn-nldb" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+ <div class="modal-body">
+    <img class ="card-img-nldb" src="images/card/tamil.jpeg" alt="NLDB">
+</div>
+    </div>
+  </div>
+</div>
+
+<!--#include file="footer.inc"-->
+<!--start footer-->
+<!--#include file="footer.inc"-->
+<!--start footer-->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-3 col-lg-3">
+                <div class="widget_title">
+                    <h4><span>අපි ගැන </span></h4>
+                </div>
+                <div class="widget_content">
+                    <p>ජාතික පශු සම්පත් සංවර්ධන මණ්ඩලය 1972 අංක 11 රාජ්‍ය කෘෂිකාර්මික සංස්ථා පනත යටතේ 1973 දී පිහිටුවන ලදී. එහි ක්ෂේත්‍ර මෙහෙයුම් 1974 දී ආරම්භ විය. රජයේ ප්‍රථම කිරි සැකසුම් කම්හල නාරාහේන්පිට 1954 දී ස්ථාපනය කරන ලදී.</p>
+                    <ul class="contact-details-alt">
+                        <li><i class="fa fa-map-marker"></i> <p><strong>ලිපිනය</strong>: තැපැල් පෙට්ටිය 1748, අංක 40, නාවල පාර, නාරාහේන්පිට</p></li>
+                        <li><i class="fa fa-user"></i> <p><strong>දුරකථන</strong>:+94112501701</p></li><li><i class="fa fa-user"></i> <p><strong>දුරකථන</strong>:+94112501702</p></li>
+                        <li><i class="fa fa-envelope"></i> <p><strong>විද්යුත් තැපෑල</strong>: <a href="mailto:info@nldb.gov.lk">info@nldb.gov.lk</a></p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-3">
+                <div class="widget_title">
+                    <a href="http://www.nldb.gov.lk/resentNews.asp"><h4><span>මෑත පුවත් </span></h4></a>
+                </div>
+                <div class="widget_content">
+                    <ul class="links">
+						
+						
+						 <li><a href="download/farms/Application Form for Farm Visits .docx">ගොවිපල පැමිණීමේ අයදුම්පත<span>2020 ජනවාරි 01</span></a></li>
+                      <!---   <li><a href="download/courses/AppTraining.docx"> Short Term Traning  Application<span>January 01, 2020</span></a></li> --->
+						<li><a href="download/breeds/Livestock Application Tamil English Sinhala.pdf"> පශු සම්පත් නිකුත් කිරීම සඳහා අයදුම්පත <span>2020 ජනවාරි 01</span></a></li>
+						<li><a href="download/breeds/Livestock Application Tamil English Sinhala .docx"> පශු සම්පත් නිකුත් කිරීම සඳහා අයදුම්පත<span>2020 ජනවාරි 01</span></a></li>
+                        <!--- <li><a href="download/Bungalow/application.pdf"> Bungalow Reservation Form <span>January 01, 2020</span></a></li> --->
+						<li><a href="download/Products/nldb-outlets.pdf">NLDB හි කිරි අලෙවිසැල්  <span>2020 ජනවාරි 01</span></a></li>
+						<li><a href="download/Products/sale-centers.pdf">NLDB විකුණුම් මධ්යස්ථාන  <span>2020 ජනවාරි 01</span></a></li>
+					<!---	<li><a href="download/Products/How to purchase breeding materials and Poultry chicks.pdf">Purchase Breeding Materials <span>January 01, 2020</span></a></li> --->
+						<li><a href="download/breeds/Application for animal issue - Sinhala.pdf">සත්ව ගැටලුව සඳහා ඉල්ලුම් පත්රය[සිංහල]  <span>2020 ජනවාරි 01</span></a></li>
+					<!---	<li><a href="download/breeds/application for animal issue-English.pdf">Application for animal issue[English] <span>January 01, 2020</span></a></li> --->
+					<!---	<li> <a href="http://www.nldb.gov.lk/download/farms/FMD Alert 3.pdf">FMD ALERT – 3nd Notice   <span>January 07, 2020</span></a></li> --->
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-3">
+                <div class="widget_title">
+                    <h4><span>ෆේස්බුක්</span></h4>
+                </div>
+                <div class="widget_content">
+                    <ul class="links">
+<li> <a href=https://www.facebook.com/nldb.lk/posts/pfbid02rHkxy3MTkHo858gZDY49TYwKdftmz2rJwaMzFmbfQ9C2EZMzi1A3gyf3KDrHJe3ql?notif_id=1705903150330458&notif_t=feedback_reaction_generic&ref=notif">1 වන කාණ්ඩයේ පශු සම්පත් තාක්ෂණ ශිල්පී පාඨමාලාව (NVQ LEVEL 4) 2024<span>2024 ජනවාරි 24</span></a></li>
+						<li> <a href="https://www.facebook.com/nldb.lk/posts/3361578557190163">කොළඹ දිස්ත්‍රික්කයේ පොල් බෙදා හැරීම <span>අප්රේල් 1, 2020</span></a></li>
+						<li> <a href="https://www.facebook.com/nldb.lk/posts/3361578557190163">කොළඹ දිස්ත්‍රික්කයේ පොල් බෙදා හැරීම <span>අප්රේල් 1, 2020</span></a></li>
+						<li> <a href="https://www.facebook.com/media/set/?set=a.3208992152448805&type=3">ප්‍රායෝගික පුහුණු පුහුණු වැඩසටහන්<span>2020 ජනවාරි 28</span></a></li>
+						<li> <a href="https://www.facebook.com/media/set/?set=a.3197564403591580&type=3">පොළොන්තලාව බාවා බංගලාව <span>2020 ජනවාරි 23</span></a></li>
+                        <li> <a href="https://www.facebook.com/media/set/?set=a.3132544736760214&type=3">නෙළුම් වැව සංචාරක බංගලාව <span>දෙසැම්බර් 26, 2019</span></a></li>
+                        <li> <a href="https://www.facebook.com/nldb.lk/posts/3091716240843064">දිනක් පැරණි බ්‍රොයිලර් පැටවුන් විකිණීමට ඇත<span> 2019 දෙසැම්බර් 09</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+<div class="col-sm-6 col-md-3 col-lg-3">
+            <div class="widget_title">
+                <h4><span> ගැලරිය </span></h4>
+            </div>
+            <div class="widget_content">
+                <div class="row">
+                    <div class="col-xs-3 col-sm-4 col-lg-3">
+                        <a href="#imageModal1" data-toggle="modal">
+                            <img src="http://www.nldb.gov.lk/images/gallery/11.jpeg" alt="Image 1" width="80" height="80" class="footer-g-t">
+                        </a>
+                    </div>
+                    <div class="col-xs-3 col-sm-4 col-lg-3">
+                        <a href="#imageModal2" data-toggle="modal">
+                            <img src="http://www.nldb.gov.lk/images/gallery/22.jpeg" alt="Image 2" width="80" height="80" class="footer-g-t">
+                        </a>
+                    </div>
+                    <div class="col-xs-3 col-sm-4 col-lg-3">
+                        <a href="#imageModal3" data-toggle="modal">
+                            <img src="http://www.nldb.gov.lk/images/gallery/33.jpeg" alt="Image 3" width="80" height="80" class="footer-g-t">
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3 col-sm-4 col-lg-3">
+                        <a href="#imageModal4" data-toggle="modal">
+                            <img src="http://www.nldb.gov.lk/images/gallery/44.jpeg" alt="Image 4" width="80" height="80" class="footer-g-t">
+                        </a>
+                    </div>
+                    <div class="col-xs-3 col-sm-4 col-lg-3">
+                        <a href="#imageModal5" data-toggle="modal">
+                            <img src="http://www.nldb.gov.lk/images/gallery/55.jpeg" alt="Image 5" width="80" height="80" class="footer-g-t">
+                        </a>
+                    </div>
+                    <div class="col-xs-3 col-sm-4 col-lg-3">
+                        <a href="#imageModal6" data-toggle="modal">
+                            <img src="http://www.nldb.gov.lk/images/gallery/66.jpeg" alt="Image 6" width="80" height="80" class="footer-g-t">
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3 col-sm-4 col-lg-3">
+                        <a href="#imageModal7" data-toggle="modal">
+                            <img src="http://www.nldb.gov.lk/images/gallery/77.jpeg" alt="Image 7" width="80" height="80" class="footer-g-t">
+                        </a>
+                    </div>
+                    <div class="col-xs-3 col-sm-4 col-lg-3">
+                        <a href="#imageModal8" data-toggle="modal">
+                            <img src="http://www.nldb.gov.lk/images/gallery/88.jpeg" alt="Image 8" width="80" height="80" class="footer-g-t">
+                        </a>
+                    </div>
+                    <div class="col-xs-3 col-sm-4 col-lg-4">
+                        <a href="#imageModal9" data-toggle="modal">
+                            <img src="http://www.nldb.gov.lk/images/gallery/99.jpeg" alt="Image 9" width="80" height="80" class="footer-g-t">
+                        </a>
+                    </div>
+ 
+         
+<div class="col-xs-3 col-sm-4 col-lg-3">
+                        <a href="#imageModal9" data-toggle="modal">
+                            <img src="http://www.nldb.gov.lk/images/Bataatha/1.1.jpeg" alt="Image 9" width="80" height="80" class="footer-g-t">
+                        </a>
+                    </div>
+<div class="col-xs-3 col-sm-4 col-lg-3">
+                        <a href="#imageModal9" data-toggle="modal">
+                            <img src="http://www.nldb.gov.lk/images/Bataatha/2.1.jpeg" alt="Image 9" width="80" height="80" class="footer-g-t">
+                        </a>
+                    </div>
+<div class="col-xs-3 col-sm-4 col-lg-4">
+                        <a href="#imageModal9" data-toggle="modal">
+                            <img src="http://www.nldb.gov.lk/images/Bataatha/3.1.jpeg" alt="Image 9" width="80" height="80" class="footer-g-t">
+                        </a>
+                    </div>
+<div class="col-xs-3 col-sm-4 col-lg-3">
+                        <a href="#imageModal9" data-toggle="modal">
+                            <img src="http://www.nldb.gov.lk/images/Bataatha/4.1.jpeg" alt="Image 9" width="80" height="80" class="footer-g-t">
+                        </a>
+                    </div>
+<div class="col-xs-3 col-sm-4 col-lg-3">
+                        <a href="#imageModal9" data-toggle="modal">
+                            <img src="http://www.nldb.gov.lk/images/Bataatha/5.1.jpeg" alt="Image 9" width="80" height="80" class="footer-g-t">
+                        </a>
+                    </div>
+<div class="col-xs-3 col-sm-4 col-lg-4">
+                        <a href="#imageModal9" data-toggle="modal">
+                            <img src="http://www.nldb.gov.lk/images/Bataatha/6.1.jpeg" alt="Image 9" width="80" height="80" class="footer-g-t">
+                        </a>
+                    </div>
+<div class="col-xs-3 col-sm-4 col-lg-3">
+                        <a href="#imageModal9" data-toggle="modal">
+                            <img src="http://www.nldb.gov.lk/images/Bataatha/7.1.jpeg" alt="Image 9" width="80" height="80" class="footer-g-t">
+                        </a>
+                    </div>
+<div class="col-xs-3 col-sm-4 col-lg-3">
+                        <a href="#imageModal9" data-toggle="modal">
+                            <img src="http://www.nldb.gov.lk/images/Bataatha/8.1.jpeg" alt="Image 9" width="80" height="80" class="footer-g-t">
+                        </a>
+                    </div>
+<div class="col-xs-3 col-sm-4 col-lg-3">
+                        <a href="#imageModal9" data-toggle="modal">
+                            <img src="http://www.nldb.gov.lk/images/Bataatha/9.1.jpeg" alt="Image 9" width="80" height="80" class="footer-g-t">
+                        </a>
+                    </div>
+       </div>
+            </div>
+        </div>
+
+<!-- Modals for the images -->
+<div class="modal fade" id="imageModal1" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <img src="http://nldb.yourwebhosting.com/public_html/nldbhn/images/gallery/1.jpeg" alt="Image 1" class="popup-image">
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="imageModal2" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <img src="http://nldb.yourwebhosting.com/public_html/nldbhn/images/gallery/2.jpeg" alt="Image 2" class="popup-image">
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="imageModal3" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <img src="http://nldb.yourwebhosting.com/public_html/nldbhn/images/gallery/3.jpeg" alt="Image 3" class="popup-image">
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="imageModal4" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class modal-content">
+            <img src="http://nldb.yourwebhosting.com/public_html/nldbhn/images/gallery/4.jpeg" alt="Image 4" class="popup-image">
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="imageModal5" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <img src="http://nldb.yourwebhosting.com/public_html/nldbhn/images/gallery/5.jpeg" alt="Image 5" class="popup-image">
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="imageModal6" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <img src="http://nldb.yourwebhosting.com/public_html/nldbhn/images/gallery/6.jpeg" alt="Image 6" class="popup-image">
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="imageModal7" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <img src="http://nldb.yourwebhosting.com/public_html/nldbhn/images/gallery/7.jpeg" alt="Image 7" class="popup-image">
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="imageModal8" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <img src="http://nldb.yourwebhosting.com/public_html/nldbhn/images/gallery/8.jpeg" alt="Image 8" class="popup-image">
+        </div>
+    </div>
+</div>
+
+<!-- Modals for the images -->
+<div class="modal fade" id="imageModal9" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+   
+     <div id="product-slider" class="carousel slide" data-ride="carousel">
+    <!-- Indicators (optional) -->
+    <ol class="carousel-indicators">
+        <li data-target="#product-slider" data-slide-to="0" class="active"></li>
+        <li data-target="#product-slider" data-slide-to="1"></li>
+        <li data-target="#product-slider" data-slide-to="2"></li>
+        <!-- Add more indicators as needed -->
+    </ol>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="http://nldb.yourwebhosting.com/public_html/nldbhn/images/Bataatha/1.jpeg" alt="Product 1">
+            <div class="carousel-caption">
+                
+            </div>
+        </div>
+        <div class="item">
+            <img src="http://nldb.yourwebhosting.com/public_html/nldbhn/images/gallery/10.jpeg" alt="Product 2">
+            <div class="carousel-caption">
+               
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="http://nldb.yourwebhosting.com/public_html/nldbhn/images/gallery/111.jpeg" alt="Product 2">
+            <div class="carousel-caption">
+               
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="http://nldb.yourwebhosting.com/public_html/nldbhn/images/gallery/12.jpeg" alt="Product 2">
+            <div class="carousel-caption">
+               
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="http://nldb.yourwebhosting.com/public_html/nldbhn/images/gallery/13.jpeg" alt="Product 2">
+            <div class="carousel-caption">
+               
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="http://nldb.yourwebhosting.com/public_html/nldbhn/images/gallery/14.jpeg" alt="Product 2">
+            <div class="carousel-caption">
+               
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="http://nldb.yourwebhosting.com/public_html/nldbhn/images/gallery/15.jpeg" alt="Product 2">
+            <div class="carousel-caption">
+               
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="http://nldb.yourwebhosting.com/public_html/nldbhn/images/gallery/16.jpeg" alt="Product 2">
+            <div class="carousel-caption">
+               
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="http://nldb.yourwebhosting.com/public_html/nldbhn/images/gallery/17.jpeg" alt="Product 2">
+            <div class="carousel-caption">
+               
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="http://nldb.yourwebhosting.com/public_html/nldbhn/images/gallery/18.jpeg" alt="Product 2">
+            <div class="carousel-caption">
+               
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="http://nldb.yourwebhosting.com/public_html/nldbhn/images/gallery/19.jpeg" alt="Product 2">
+            <div class="carousel-caption">
+               
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="http://nldb.yourwebhosting.com/public_html/nldbhn/images/gallery/20.jpeg" alt="Product 2">
+            <div class="carousel-caption">
+               
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="http://nldb.yourwebhosting.com/public_html/nldbhn/images/gallery/21.jpeg" alt="Product 2">
+            <div class="carousel-caption">
+               
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="http://nldb.yourwebhosting.com/public_html/nldbhn/images/gallery/222.jpeg" alt="Product 2">
+            <div class="carousel-caption">
+               
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="http://nldb.yourwebhosting.com/public_html/nldbhn/images/gallery/23.jpeg" alt="Product 2">
+            <div class="carousel-caption">
+               
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="http://nldb.yourwebhosting.com/public_html/nldbhn/images/gallery/24.jpeg" alt="Product 2">
+            <div class="carousel-caption">
+               
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="http://nldb.yourwebhosting.com/public_html/nldbhn/images/gallery/25.jpeg" alt="Product 2">
+            <div class="carousel-caption">
+               
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="http://nldb.yourwebhosting.com/public_html/nldbhn/images/gallery/26.jpeg" alt="Product 2">
+            <div class="carousel-caption">
+               
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="http://nldb.yourwebhosting.com/public_html/nldbhn/images/gallery/27.jpeg" alt="Product 2">
+            <div class="carousel-caption">
+               
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="http://nldb.yourwebhosting.com/public_html/nldbhn/images/Bataatha/2.jpeg" alt="Product 2">
+            <div class="carousel-caption">
+               
+            </div>
+        </div>
+<div class="item">
+            <img src="http://nldb.yourwebhosting.com/public_html/nldbhn/images/Bataatha/1.jpeg" alt="Product 2">
+            <div class="carousel-caption">
+               
+            </div>
+        </div>
+
+
+        <!-- Add more slides as needed -->
+    </div>
+
+    <!-- Controls (optional) -->
+    <a class="left carousel-control" href="#product-slider" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#product-slider" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div>
+
+
+           
+        </div>
+    </div>
+</div>
+
+
+
+
+
+        </div>
+    </div>
+</footer>
+<!--end footer-->
+<!--#include file="copyright.inc"-->
+
+<section class="footer_bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 ">
+                <p class="copyright">© ප්‍රකාශන හිමිකම ඇවිරිණී 2020 NLDB |   <a href="http://www.nldb.gov.lk/">ජාතික පශු සම්පත් සංවර්ධන මණ්ඩලය මගින් බල ගැන්වේ</a></p>
+            </div>
+            
+            <div class="col-lg-6 ">
+                <div class="footer_social">
+                    <ul class="footbot_social">
+                        <li><a class="fb" href="https://www.facebook.com/nldbs" data-placement="top" data-toggle="tooltip" title="Facbook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="twtr" href="#." data-placement="top" data-toggle="tooltip" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+
+                        <li><a class="skype" href="#." data-placement="top" data-toggle="tooltip" title="Skype"><i class="fa fa-skype"></i></a></li>
+                        <li><a class="rss" href="#." data-placement="top" data-toggle="tooltip" title="RSS"><i class="fa fa-rss"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/retina-1.1.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script> <!-- jQuery cookie -->
+<script type="text/javascript" src="js/styleswitch.js"></script> <!-- Style Colors Switcher -->
+<script src="js/jquery.fractionslider.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="js/jquery.smartmenus.min.js"></script>
+<script type="text/javascript" src="js/jquery.smartmenus.bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.jcarousel.js"></script>
+<script type="text/javascript" src="js/jflickrfeed.js"></script>
+<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="js/jquery.isotope.min.js"></script>
+<script type="text/javascript" src="js/swipe.js"></script>
+
+
+<script src="js/main.js"></script>
+
+<!-- Start Style Switcher -->
+<!--- <div class="switcher"></div> --->
+<!-- End Style Switcher -->
+<script>
+    $(window).load(function(){
+        $('.slider').fractionSlider({
+            'fullWidth': 			true,
+            'controls': 			true,
+            'responsive': 			true,
+            'dimensions': 			"1920,450",
+            'timeout' :             5000,
+            'increase': 			true,
+            'pauseOnHover': 		true,
+            'slideEndAnimation': 	false,
+            'autoChange':           true
+        });
+    });
+</script>
+<script>
+$(function(){
+  $("button").click(function(){
+    $(".cover").fadeIn("300");
+  })
+  $(".cover,.close").click(function(){
+    $(".cover").fadeOut("300");
+  })
+  $(".contents").click(function(e){
+    e.stopPropagation();
+  })
+})
+</script>
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+ <script>
+        let countDown = new Date("Oct 8, 2023 08:00:00").getTime();
+
+        let counter = setInterval(() => {
+            let dateNow = new Date().getTime();
+            // Date difference
+            let dateDiff = countDown - dateNow;
+
+            // Days
+            let days = Math.floor(dateDiff / (1000 * 60 * 60 * 24));
+
+            // Hours
+            let hours = Math.floor((dateDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+            // Minutes
+            let minutes = Math.floor((dateDiff % (1000 * 60 * 60)) / (1000 * 60));
+
+            // Seconds
+            let seconds = Math.floor((dateDiff % (1000 * 60)) / 1000);
+
+            // Update the countdown display
+            document.querySelector(".days").innerHTML = days < 10 ? `0${days}` : days;
+            document.querySelector(".hours").innerHTML = hours < 10 ? `0${hours}` : hours;
+            document.querySelector(".minutes").innerHTML = minutes < 10 ? `0${minutes}` : minutes;
+            document.querySelector(".seconds").innerHTML = seconds < 10 ? `0${seconds}` : seconds;
+
+            if (dateDiff <= 1000) {
+                clearInterval(counter);
+            }
+        }, 1000);
+    </script>
+
+<!---- sponsors slider js ---->
+
+<!--Model Corses 01-->
+<div class="modal fade courselt" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close model-btn-nldb" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+ <div class="modal-body">
+    <img class ="card-img-nldb" src="images/card/dairy-cattle.jpeg" alt="NLDB">
+<a  href="download/Application-NVQ-4-LT.pdf" target="_blank">අයදුම්පත්‍රය බාගතකරන්න</a>
+</div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

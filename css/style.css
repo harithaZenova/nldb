@@ -193,8 +193,9 @@ a:focus{
 
 }
 .top-info .langu{
-    float: inline-start; 
-    margin-right: 30px; 
+    float: right !important;
+  
+    margin-left: 30px; 
 }
 .top-info li:hover a                {color:#fff!important;}
 .top-info li:hover a.my-tweet       {background:#3ABDD1;}

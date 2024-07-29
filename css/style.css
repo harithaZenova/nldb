@@ -1928,7 +1928,7 @@ a.link-style3 {
     border-style: none solid solid;
     border-width: medium 1px 1px;
     border-color: #f2f2f2;
-    padding: 10px 15px 5px;
+    padding: 5px 2px 5px;
     overflow: hidden;
 }
 /* ===================================================== */
@@ -4280,7 +4280,7 @@ ul{
 .column {
     float: left;
     width: 20%;
-    padding: 0 10px;
+    padding: 0 1px;
   }
   
   /* Remove extra left and right margins, due to padding */
@@ -4304,8 +4304,8 @@ ul{
   
   /* Style the counter cards */
   .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 16px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+    padding: 5px;
     text-align: left;
-    background-color: #f1f1f1;
+    background-color: #ffffff;
   }

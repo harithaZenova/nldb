@@ -1848,8 +1848,14 @@ a.link-style3 {
 }
 
 .cards {
-   height: 300px;
-}
+    height: 300px;
+    
+ }
+ .cardss {
+    height: 300px;
+    border:2px solid #15b994;
+    background-image: linear-gradient(rgb(245, 245, 245), rgba(63, 185, 47, 0.644));
+ }
 
 .pic > img {
     width: 100%;
@@ -3091,13 +3097,13 @@ ul.recent_tab_list li
     border:1px solid #F1F1F1;
     margin-bottom: 15px;
     line-height: normal;
-    font-size: 10px;
+    font-size: 12px;
 }
 .progress_skill .bar {
-    background:#8CBE45;
+    background:#8cbe45ce;
     line-height:24px;
     font-family:"Open sans", Helvetica, Arial, sans-serif;
-    color: #ffffff;
+    color: #f3f2f2;
     text-align: left;
     font-weight: 600;
     text-indent: 15px;
@@ -3108,8 +3114,8 @@ ul.recent_tab_list li
 }
 .progress_skill:hover .bar {
     -webkit-transition: all 0.35s ease; -moz-transition: all 0.35s ease; -o-transition: all 0.35s ease; transition: all 0.35s ease;
-    background:#79A63E !important;
-    color:#fff;
+    background:#57a04ed8 !important;
+    color:#e0e0e0;
     cursor: pointer;
 }
 .progress-skill-bar {
@@ -4232,23 +4238,40 @@ ul{
     text-align: center;
 }
 
-
 .text-container {
     position: absolute;
     color: rgb(255, 255, 255);
     left: 50%;
     top: 75%;
     transform: translate(-50%, -50%);
-    background-color: rgba(41, 41, 41, 0.8);
+    /* background-color: rgba(41, 41, 41, 0.8); */
     padding: 0.5rem;
     text-align: center;
     font-size: 26px;
 }
-  
+.text-container11 {
+    position: absolute;
+    color: rgb(91, 92, 91);
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    /* background-color: rgba(41, 41, 41, 0.8); */
+    padding: 0.5rem;
+    
+    text-align: center;
+    font-size: 19px;
+}
+
+.text-container11 p {
+    text-align: center;
+    width: 300px;
+    padding-bottom: 50px;
+   
+}
 
 .buttona {
     padding: 12px 24px;
-    font-size: 16px;
+    font-size: 19px;
     font-weight: 600;
     border: none;
     border-radius: 8px;
@@ -4258,19 +4281,18 @@ ul{
 }
 
 .buttona:focus {
-    outline: 3px solid rgba(163, 162, 162, 0.877);
+    outline: 3px solid rgba(35, 128, 35, 0.877);
     outline-offset: 2px;
 }
 
 .buttona--primary {
-    background-color:rgb(49, 49, 49);
+    background-color:rgb(34, 184, 54);
     color: white;
 }
 
 .buttona--primary:hover {
-    background-color: rgb(74, 75, 74);
+    background-color: rgb(51, 170, 51);
 }
-
 
 
 /* All about team */
@@ -4309,6 +4331,63 @@ ul{
     text-align: left;
     background-color: #ffffff;
   }
+
+
+  /* Language Popup */
+
+  /* Basic styling for the popup */
+  .popup {
+      opacity: 0;
+      visibility: hidden;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 1280px;
+      padding: 20px;
+      background: rgb(255, 255, 255);
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      z-index: 10000;
+      transition: opacity 0.3s, visibility 0.3s;
+  }
+
+  /* Dim background */
+  .popup-overlay {
+      opacity: 0;
+      visibility: hidden;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 9999;
+      transition: opacity 0.3s, visibility 0.3s;
+  }
+
+  /* Button to close the popup */
+  .lang-btn {
+    background-color:rgb(34, 184, 54);
+    color: white;
+      border: none;
+      padding: 8px 10px;
+      margin: 10px;
+      cursor: pointer;
+  }
+  .buttons{
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      }
+  /* Show popup and overlay */
+  .popup.show, .popup-overlay.show {
+      opacity: 1;
+      visibility: visible;
+  }
+  body.noscroll {
+          overflow: hidden;
+      }
 
 
 

@@ -399,6 +399,81 @@ border-top: 1px solid #d9671e ;
 
 </head>
 <body>
+
+<!-- Popup langauge -->
+    <div class="popup-overlay" id="popupOverlay"></div>
+    <div class="popup" id="popup">
+        <section class="wrapper">
+            <hr style="border: 5px solid rgb(86, 92, 86);">
+                 <section class="content about" >
+                     <div class="container" >
+         
+                         <!-- top head ekataaaaa -->
+                         <div class="col-12">
+                             <div id="loo">
+                                 <h1><img src="./images/logo.png" alt="Velocity" /></a></h1>
+                             </div>
+                         </div>
+                        <!-- top head ekataaaaa -->
+         
+                         <div class="row  sub_content" >
+                             <div class="col-lg-12 col-md-12 col-sm-12">
+                                 <div class="dividerHeading">
+                                     <hr style="border: 1px solid rgba(78, 173, 78, 0.521); margin-bottom: 70px;">	
+         
+                                 </div>
+                             </div>
+                             <div class="col-lg-4 col-md-4 col-sm-6" >
+                                 <div class="our-team" >
+                                                           <div class="pic cardss gfg">
+                                                              
+                                                              <div class="text-container11">
+                                                                 <h1 style="font-weight: bold;">ආයුබෝවන්</h1>
+                                                                 <p> ඔබ කැමති භාෂාව තෝරන්න </p>
+                                                                 <a href="si.html"><button class="lang-btn buttona buttona--primary" data-lang="si" id="closeBtn">සිංහල</button></a>
+                                                             </div>
+                                                             </div>
+                                                 
+                                         </div>
+                                     </div>
+                             <div class="col-lg-4 col-md-4 col-sm-6" >
+                                 <div class="our-team">
+                                     <div class="pic cardss gfg">
+                                         
+                                         <div class="text-container11">
+                                             <h1>வணக்கம்</h1>
+                                      <p> மொழியை தேர்ந்தெடுங்கள்</p>
+                                      <a href="ta.html"> <button class="lang-btn buttona buttona--primary" data-lang="ta" id="closeBtn">தமிழ்</button></a>
+                                         </div>
+                                     </div>
+                                    
+                                 </div>
+                             </div>
+                             <div class="col-lg-4 col-md-4 col-sm-6" >
+                                 <div class="our-team">
+                                     <div class="pic cardss gfg">
+                                       
+                                         <div class="text-container11">
+                                             <h1>Welcome</h1>
+                                             <p> Select Your Preffered Language </p>
+                                             <a href="index.html"> <button class="lang-btn buttona buttona--primary" data-lang="en" id="closeBtn">English</button></a>
+                                         </div>
+                                 
+                                     </div>
+                                  
+                                 </div>
+                             </div>
+                             
+                         </div>
+                     
+                         
+                         
+                     </div>
+                 </section>
+             </section>
+        
+    </div>
+
 <!--Start Header-->
 <header id="header">
     <div id="top-bar">
@@ -502,13 +577,13 @@ border-top: 1px solid #d9671e ;
                     </li>
                         <li><a>Products</a>
                             <ul class="dropdown-menu">
-                                <li><a href="portfolio_single_3.html">Breeding equipment</a></li>
+                                <li><a href="products/breeding-equipment.html">Breeding equipment</a></li>
 
                                 <li>
-                                    <a href="portfolio_single.html">Farm products</a>
+                                    <a >Farm products</a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="portfolio_single.html">Dairy products </a></li>
-                                        <li><a href="portfolio_single_2.html">Meat products</a></li>
+                                        <li><a href="products/dairy-product.html">Dairy products </a></li>
+                                        <li><a href="products/meat-product.html">Meat products</a></li>
                                     </ul>
                                 </li>
                             </ul></li>
@@ -523,20 +598,21 @@ border-top: 1px solid #d9671e ;
                         </ul>
                         
                     </li>
-                        <li><a href="#">Courses</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="courses/TrainingC.html"> Monthly Dairy cattle Training Course
-                                </a></li>
-                            <li><a href="courses/">Six Month Livestock Technician Course
+                    <li><a href="#">Courses</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="courses/monthlydairycattleC.html"> Monthly Dairy cattle Training Course
                             </a></li>
-                                <li><a href="courses/ShortTC.html">Short Term Training programme</a></li>
-    
-                            </ul>
-                        </li>
+                        <li><a href="courses/sixMonthLSTechniC.html">Six Month Livestock Technician Course
+                        </a></li>
+                            <li><a href="courses/ShortTC.html">Short Term Training programme</a></li>
+
+                        </ul>
+                    </li>
                     
     
                         <li><a href="#">Downloads</a>
                             <ul class="dropdown-menu">
+                                <li><a href="download/Corporate Plan 2024-2028 Final (1).pdf" download>Corporate Plan 2024-2028</a></li>
                                 <li><a href="download/Assistantfarmmanager.pdf" download>Assistant Manager Vacancies </a></li>
                                 <li><a href="download/Application-NVQ-4-LT.pdf" download>Livestock Technical Course</a></li>
                                
@@ -2129,6 +2205,46 @@ function myFunction() {
             }
         }, 1000);
     </script>
+
+    <!-- Popup  Luanguge-->
+     
+<script>
+    // Function to show the popup
+    function showPopup() {
+        document.getElementById('popup').classList.add('show');
+        document.getElementById('popupOverlay').classList.add('show');
+        document.body.classList.add('noscroll'); // Prevent scrolling
+    }
+
+    // Function to close the popup
+    function closePopup() {
+        document.getElementById('popup').classList.remove('show');
+        document.getElementById('popupOverlay').classList.remove('show');
+        document.body.classList.remove('noscroll'); // Allow scrolling
+    }
+
+    // Function to handle language selection
+    function selectLanguage(lang) {
+        sessionStorage.setItem('selectedLanguage', lang);
+        closePopup();
+    }
+
+    // Show the popup when the page loads if no language has been selected
+    window.onload = function() {
+        if (!sessionStorage.getItem('selectedLanguage')) {
+            showPopup();
+        }
+    }
+
+    // Add event listeners to the language buttons
+    document.querySelectorAll('.lang-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            const lang = this.getAttribute('data-lang');
+            selectLanguage(lang);
+        });
+    });
+</script>
+
 
 <!---- sponsors slider js ---->
 

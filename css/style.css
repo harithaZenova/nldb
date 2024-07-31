@@ -3095,7 +3095,7 @@ ul.recent_tab_list li
     box-shadow: none;
     height:27px;
     border:1px solid #F1F1F1;
-    margin-bottom: 15px;
+    margin-bottom: 1px;
     line-height: normal;
     font-size: 12px;
 }
@@ -3137,7 +3137,7 @@ ul.recent_tab_list li
     line-height: 25px;
     padding: 0 0 0 4px;
     text-align: center;
-    width: 37px;
+    width: 47px;
     border-top-left-radius:5px;
     border-bottom-left-radius:5px;
 }
